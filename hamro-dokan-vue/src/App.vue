@@ -3,7 +3,7 @@
     <nav class="navbar is-dark">
       <div class="navbar-brand">
         <router-link to="/" class="navbar-item"
-          ><strong>HAMRO DOKAN</strong></router-link
+          ><strong>हाम्रो दोकान</strong></router-link
         >
         <a
           href=""
@@ -23,6 +23,27 @@
         id="navbar-menu"
         v-bind:class="{ 'is-active': showMobileMenu }"
       >
+        <div class="navbar-start">
+          <div class="navbar-item">
+            <form method="get" action="/search">
+              <div class="field has-addons">
+                <div class="control">
+                  <input
+                    class="input"
+                    type="text"
+                    name="query"
+                    placeholder="खोज्जनुहोस...."
+                  />
+                </div>
+                <div class="control">
+                  <button class="button is-info">
+                    <span><i class="fas fa-search"></i></span>
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
         <div class="navbar-end">
           <router-link to="/electronics" class="navbar-item"
             >Electronics</router-link

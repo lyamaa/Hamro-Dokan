@@ -11,17 +11,12 @@
       <div class="column is-12">
         <h2 class="is-size-2 has-text-centered">Latest Products</h2>
       </div>
-      <div
-        class="column is-3"
+
+      <ProductList
         v-for="product in latestProducts"
         v-bind:key="product.id"
-      >
-        <ProductList
-          v-for="product in latestProducts"
-          v-bind:key="product.id"
-          v-bind:product="product"
-        />
-      </div>
+        v-bind:product="product"
+      />
     </div>
   </div>
 </template>
