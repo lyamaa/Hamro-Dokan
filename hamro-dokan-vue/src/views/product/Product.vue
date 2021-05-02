@@ -50,6 +50,8 @@ export default {
         .get(`product/${category_slug}/${product_slug}`)
         .then((res) => {
           this.product = res.data;
+
+          document.title = this.product.name + " | Hamro Dokan";
         })
         .catch((err) => {
           console.log(err);

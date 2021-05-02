@@ -2,7 +2,9 @@
   <div id="wrapper">
     <nav class="navbar is-dark">
       <div class="navbar-brand">
-        <router-link to="/"><strong>HAMRO DOKAN</strong></router-link>
+        <router-link to="/" class="navbar-item"
+          ><strong>HAMRO DOKAN</strong></router-link
+        >
         <a
           href=""
           class="navbar-burger"
@@ -22,8 +24,10 @@
         v-bind:class="{ 'is-active': showMobileMenu }"
       >
         <div class="navbar-end">
-          <router-link to="/">Summer</router-link>
-          <router-link to="/">Winter</router-link>
+          <router-link to="/electronics" class="navbar-item"
+            >Electronics</router-link
+          >
+          <router-link class="navbar-item" to="/winter">Winter</router-link>
           <div class="navbar-item">
             <div class="buttons">
               <router-link to="/login" class="button is-info"
