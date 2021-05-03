@@ -52,9 +52,16 @@
             <router-link class="navbar-item" to="/winter">Winter</router-link>
             <div class="navbar-item">
               <div class="buttons">
-                <router-link to="/login" class="button is-info"
-                  >LogIn</router-link
-                >
+                <template v-if="$store.state.isAuthenticated">
+                  <router-link to="/profile" class="button is-info"
+                    >Profile</router-link
+                  >
+                </template>
+                <template v-else>
+                  <router-link to="/login" class="button is-info"
+                    >LogIn</router-link
+                  >
+                </template>
                 <router-link to="/cart" class="button is-success">
                   <span class="icon"><i class="fas fa-shopping-cart"></i></span>
                   <span>Cart ({{ cartTotalLength }})</span>
@@ -75,7 +82,7 @@
       </section>
     </div>
     <footer class="footer">
-      <p class="has-text-centered">Copyright (c) 2021</p>
+      <p class="has-text-centered">Copyright ©️ 2021</p>
     </footer>
   </body>
 </template>
