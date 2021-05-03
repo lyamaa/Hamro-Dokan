@@ -32,10 +32,4 @@ export default {
   margin-left: -1.25rem;
   margin-right: -1.25rem;
 }
-.box {
-  box-shadow: 100px, 100px;
-  -webkit-box-shadow: 0 0 10px rgb(0, 0, 0);
-  -moz-box-shadow: 0 0 10px rgb(0, 0, 0);
-  border: solid;
-}
 </style>

@@ -1,83 +1,86 @@
 <template>
-  <div id="wrapper">
-    <nav class="navbar is-dark">
-      <div class="navbar-brand">
-        <router-link to="/" class="navbar-item"
-          ><strong>हाम्रो दोकान</strong></router-link
-        >
-        <a
-          href=""
-          class="navbar-burger"
-          aria-label="menu"
-          aria-expanded="false"
-          data-target="navbar-menu"
-          @click="showMobileMenu = !showMobileMenu"
-        >
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-        </a>
-      </div>
-      <div
-        class="navbar-menu"
-        id="navbar-menu"
-        v-bind:class="{ 'is-active': showMobileMenu }"
-      >
-        <div class="navbar-start">
-          <div class="navbar-item">
-            <form method="get" action="/search">
-              <div class="field has-addons">
-                <div class="control">
-                  <input
-                    class="input"
-                    type="text"
-                    name="query"
-                    placeholder="खोज्जनुहोस...."
-                  />
-                </div>
-                <div class="control">
-                  <button class="button is-info">
-                    <span><i class="fas fa-search"></i></span>
-                  </button>
-                </div>
-              </div>
-            </form>
-          </div>
-        </div>
-        <div class="navbar-end">
-          <router-link to="/electronics" class="navbar-item"
-            >Electronics</router-link
+  <body>
+    <div id="wrapper">
+      <nav class="navbar">
+        <div class="navbar-brand">
+          <router-link to="/" class="navbar-item"
+            ><strong>हाम्रो दोकान</strong></router-link
           >
-          <router-link class="navbar-item" to="/winter">Winter</router-link>
-          <div class="navbar-item">
-            <div class="buttons">
-              <router-link to="/login" class="button is-info"
-                >LogIn</router-link
-              >
-              <router-link to="/cart" class="button is-success">
-                <span class="icon"><i class="fas fa-shopping-cart"></i></span>
-                <span>Cart ({{ cartTotalLength }})</span>
-              </router-link>
+          <a
+            href=""
+            class="navbar-burger"
+            aria-label="menu"
+            aria-expanded="false"
+            data-target="navbar-menu"
+            @click="showMobileMenu = !showMobileMenu"
+          >
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+        <div
+          class="navbar-menu"
+          id="navbar-menu"
+          v-bind:class="{ 'is-active': showMobileMenu }"
+        >
+          <div class="navbar-start">
+            <div class="navbar-item">
+              <form method="get" action="/search">
+                <div class="field has-addons">
+                  <div class="control">
+                    <input
+                      class="input"
+                      type="text"
+                      name="query"
+                      placeholder="खोज्जनुहोस...."
+                    />
+                  </div>
+                  <div class="control">
+                    <button class="button is-info">
+                      <span><i class="fas fa-search"></i></span>
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="navbar-end">
+            <router-link to="/electronics" class="navbar-item"
+              >Electronics</router-link
+            >
+            <router-link class="navbar-item" to="/winter">Winter</router-link>
+            <div class="navbar-item">
+              <div class="buttons">
+                <router-link to="/login" class="button is-info"
+                  >LogIn</router-link
+                >
+                <router-link to="/cart" class="button is-success">
+                  <span class="icon"><i class="fas fa-shopping-cart"></i></span>
+                  <span>Cart ({{ cartTotalLength }})</span>
+                </router-link>
+              </div>
             </div>
           </div>
         </div>
+      </nav>
+      <div
+        class="is-loading-bar has-text-centered"
+        v-bind:class="{ 'is-loading': $store.state.isLoading }"
+      >
+        <div class="lds-dual-ring"></div>
       </div>
-    </nav>
-    <div
-      class="is-loading-bar has-text-centered"
-      v-bind:class="{ 'is-loading': $store.state.isLoading }"
-    >
-      <div class="lds-dual-ring"></div>
+      <section class="section">
+        <router-view />
+      </section>
     </div>
-    <section class="section">
-      <router-view />
-    </section>
     <footer class="footer">
       <p class="has-text-centered">Copyright (c) 2021</p>
     </footer>
-  </div>
+  </body>
 </template>
 <script>
+import axios from "axios";
 export default {
   data() {
     return {
@@ -89,6 +92,13 @@ export default {
   },
   beforeCreate() {
     this.$store.commit("initializeStore");
+    const token = this.$store.state.token;
+
+    if (token) {
+      axios.defaults.headers.common["Authorization"] = "Token " + token;
+    } else {
+      axios.defaults.headers.common["Authorization"] = "";
+    }
   },
   mounted() {
     this.cart = this.$store.state.cart;
@@ -106,6 +116,34 @@ export default {
 </script>
 <style lang="scss">
 @import "../node_modules/bulma";
+#wrapper {
+  flex: 1;
+}
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  background-color: #ffffff;
+}
+
+.box {
+  box-shadow: 50px, 50px;
+  -webkit-box-shadow: 0 0 10px #707070;
+  -moz-box-shadow: 0 0 10px #ffdf6c;
+}
+
+.navbar {
+  background-color: #202020;
+  color: #ffffff;
+}
+.navbar-item {
+  color: #ffffff;
+}
+.footer {
+  background-color: #202020;
+  color: #ffffff;
+}
+
 .lds-dual-ring {
   display: inline-block;
   width: 80px;

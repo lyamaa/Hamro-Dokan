@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <section class="hero is-medium is-dark mb-6">
+    <section class="hero is-medium mb-6">
       <div class="hero-body has-text-centered">
         <p class="title mb-6">Welcome, to Hamro Dokan..</p>
         <p class="subtitle">Hami sabaiko dokan, Hamro Dokan..</p>
@@ -52,4 +52,14 @@ export default {
 };
 </script>
 
-
+<style scoped>
+.hero {
+  background-color: #202020;
+}
+.title {
+  color: #ffffff;
+}
+.subtitle {
+  color: #ffffff;
+}
+</style>
