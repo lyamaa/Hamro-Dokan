@@ -13,6 +13,8 @@ class Category(models.Model):
 
     class Meta:
         ordering = ("name",)
+        verbose_name = _("Category")
+        verbose_name_plural = _("Categories")
 
     def __str__(self) -> str:
         return self.name
@@ -21,8 +23,33 @@ class Category(models.Model):
         return f"/{self.slug}/"
 
 
+class ProductType(models.Model):
+    name = models.CharField(_("Product Type"), max_length=255)
+    is_active = models.BooleanField(_("Is Active"), default=True)
+
+    class Meta:
+        verbose_name = _("Product Type")
+        verbose_name_plural = _("Product Types")
+
+    def __str__(self) -> str:
+        return self.name
+
+
+class ProductSpecs(models.Model):
+    product_type = models.ForeignKey(ProductType, on_delete=models.RESTRICT)
+    name = models.CharField(_("Name"), max_length=255)
+
+    class Meta:
+        verbose_name = _("Product Specification")
+        verbose_name_plural = _("Product Specifications")
+
+    def __str__(self):
+        return self.name
+
+
 class Product(models.Model):
-    category = models.ForeignKey(Category, related_name="products", on_delete=models.CASCADE)
+    product_type = models.ForeignKey(ProductType, on_delete=models.RESTRICT)
+    category = models.ForeignKey(Category, related_name="products", on_delete=models.RESTRICT)
     name = models.CharField(_("Product Name"), max_length=50)
     slug = models.SlugField(_("Product Slug"), unique=True)
     description = models.TextField()
@@ -67,3 +94,25 @@ class Product(models.Model):
         thumbnail = File(thumb_io, name=image.name)
 
         return thumbnail
+
+
+class ProductSpecificationValue(models.Model):
+    """
+    The Product Specification Value table holds each of the
+    products individual specification or features.
+    """
+
+    product = models.ForeignKey(Product, on_delete=models.CASCADE)
+    specification = models.ForeignKey(ProductSpecs, on_delete=models.RESTRICT)
+    value = models.CharField(
+        verbose_name=_("value"),
+        help_text=_("Product specification value (maximum of 255 words"),
+        max_length=255,
+    )
+
+    class Meta:
+        verbose_name = _("Product Specification Value")
+        verbose_name_plural = _("Product Specification Values")
+
+    def __str__(self):
+        return self.value
