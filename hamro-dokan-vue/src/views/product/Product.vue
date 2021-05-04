@@ -16,9 +16,13 @@
           <div class="control">
             <input type="number" class="input" min="1" v-model="quantity" />
           </div>
-          <div class="control">
-            <a href="" class="button is-dark" @click="addToCart">Add to cart</a>
-          </div>
+          <form @submit.prevent="addToCart">
+            <div class="control">
+              <a href="" class="button is-dark" @click="addToCart"
+                >Add to cart</a
+              >
+            </div>
+          </form>
         </div>
       </div>
     </div>

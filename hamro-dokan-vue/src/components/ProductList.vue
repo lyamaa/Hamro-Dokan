@@ -1,19 +1,18 @@
 <template>
   <div class="column is-3">
-    <div class="box">
-      <figure class="image is-5by4 mb-4">
-        <img :src="product.getThumbnail" alt="product thumbnail" />
-      </figure>
-      <h3 class="is-size-4">{{ product.name }}</h3>
-      <p class="is-size-6 has-text-grey">
-        <span>&#8360; {{ product.price }}</span>
-      </p>
-      <router-link
-        v-bind:to="product.getAbsoluteUrl"
-        class="button is-dark mt-4"
-        >View</router-link
-      >
-    </div>
+    <a v-bind:href="product.getAbsoluteUrl">
+      <div class="box">
+        <figure class="image is-5by4 mb-4">
+          <img :src="product.getThumbnail" alt="product thumbnail" />
+        </figure>
+        <h3 class="is-size-4">{{ product.name }}</h3>
+        <p class="is-size-6 has-text-grey">
+          <span class="tag is-warning is-medium mt-2"
+            >&#8360; {{ product.price }}</span
+          >
+        </p>
+      </div>
+    </a>
   </div>
 </template>
 

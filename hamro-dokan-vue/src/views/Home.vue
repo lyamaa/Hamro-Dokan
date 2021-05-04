@@ -1,9 +1,113 @@
 <template>
   <div class="home">
-    <section class="hero is-medium mb-6">
-      <div class="hero-body has-text-centered">
-        <p class="title mb-6">Welcome, to Hamro Dokan..</p>
-        <p class="subtitle">Hami sabaiko dokan, Hamro Dokan..</p>
+    <!-- Start Hero Carousel -->
+    <section class="section" id="carousel-section">
+      <div class="container">
+        <div id="carousel-demo" class="carousel pb-6" style="overflow: hidden">
+          <div class="item-1">
+            <div class="columns">
+              <div class="column is-half">
+                <h2 class="title is-1">Welcome to Hamro Dokan</h2>
+                <p>
+                  Hamro Dokan strives to provide customers the best shopping
+                  experience in Nepal. The online store is updated daily and new
+                  products are added every day to cater to all your needs. Visit
+                  <a href="/">hamro-dokan.com.np</a> to experience shopping in
+                  Nepal as never before.
+                </p>
+                <br />
+
+                <div class="buttons is-left">
+                  <button
+                    class="button is-medium is-orange button is-link is-light"
+                  >
+                    SHOP NOW
+                  </button>
+                  <button class="button is-medium is-black is-primary is-light">
+                    CONTACT US
+                  </button>
+                </div>
+              </div>
+              <div class="column is-half">
+                <figure class="image is is-covered">
+                  <img
+                    src="https://res.cloudinary.com/dazyxzm1e/image/upload/v1620129151/undraw_shopping_app_flsj_k5vifw.svg"
+                    alt=""
+                  />
+                </figure>
+              </div>
+            </div>
+          </div>
+          <div class="item-2">
+            <div class="columns">
+              <div class="column is-half">
+                <h2 class="title is-1">Welcome to Hamro Dokan</h2>
+                <p>
+                  There are many variations of passages of Lorem Ipsum
+                  available, but the majority have suffered alteration in some
+                  form, by injected humour, or randomised words which don't look
+                  even slightly believable.
+                </p>
+                <br />
+
+                <div class="buttons is-left">
+                  <button
+                    class="button is-medium is-orange button is-link is-light"
+                  >
+                    SHOP NOW
+                  </button>
+                  <button class="button is-medium is-black is-primary is-light">
+                    CONTACT US
+                  </button>
+                </div>
+              </div>
+              <div class="column is-half">
+                <figure class="image is is-covered">
+                  <img
+                    src="https://res.cloudinary.com/dazyxzm1e/image/upload/v1620129151/undraw_add_to_cart_vkjp_seg44h.svg"
+                    alt=""
+                  />
+                </figure>
+              </div>
+            </div>
+            <!-- Slide Content -->
+          </div>
+          <div class="item-3">
+            <!-- Slide Content -->
+            <div class="columns">
+              <div class="column is-half">
+                <h2 class="title is-1">Welcome to Hamro Dokan</h2>
+                <p>
+                  There are many variations of passages of Lorem Ipsum
+                  available, but the majority have suffered alteration in some
+                  form, by injected humour, or randomised words which don't look
+                  even slightly believable.
+                </p>
+                <br />
+
+                <div class="buttons is-left">
+                  <button
+                    class="button is-medium is-orange button is-link is-light"
+                  >
+                    SHOP NOW
+                  </button>
+                  <button class="button is-medium is-black is-primary is-light">
+                    CONTACT US
+                  </button>
+                </div>
+              </div>
+              <div class="column is-half">
+                <figure class="image is is-covered">
+                  <img
+                    src="https://res.cloudinary.com/dazyxzm1e/image/upload/v1620129151/undraw_web_shopping_dd4l_fszlmm.svg"
+                    alt=""
+                  />
+                </figure>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End Carousel -->
       </div>
     </section>
 
@@ -18,11 +122,131 @@
         v-bind:product="product"
       />
     </div>
+    <!-- LIST SECTION -->
+
+    <section class="section">
+      <div class="container">
+        <div class="has-text-centered pb-6">
+          <h1 class="title is-1">Best Produts</h1>
+          <h3 class="subtitle">
+            There are many variations of passages of Lorem Ipsum available, but
+            the majority have
+          </h3>
+        </div>
+        <div class="columns">
+          <div
+            class="column is-three-quarters is-flex is-justify-content-center is-flex-direction-column"
+          >
+            <h3 class="title is-3">Best Fresh Orange</h3>
+            <p class="hast-text-centered">
+              but the majority have suffered alteration in some form, by
+              injected humour, or randomised words which don't look even
+              slightly believable. If you are going to use a passage of Lorem
+              Ipsum, you need to be
+            </p>
+            <br />
+            <div class="buttons is-left">
+              <button class="button is-medium is-black is-light is-link">
+                Buy Now
+              </button>
+            </div>
+          </div>
+          <div class="column">
+            <figure class="image">
+              <img src="images/orange.png" />
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MAP SECTION -->
+    <section class="map-section">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10499.966498430253!2d2.2944813!3d48.8583701!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x8ddca9ee380ef7e0!2zz4DPjc-BzrPOv8-CIM-Ezr_PhSDOkc6Qz4bOtc67!5e0!3m2!1sel!2sgr!4v1609878476869!5m2!1sel!2sgr"
+        id="map"
+      ></iframe>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="footer-main">
+          <div class="columns">
+            <div class="column">
+              <h4 class="title is-4">Products</h4>
+              <p class="">
+                randomised words which don't look even slightly believable. If
+                you are going to use a passage of Lorem Ipsum,
+              </p>
+            </div>
+            <div class="column">
+              <h4 class="title is-4">Services</h4>
+              <p class="">
+                randomised words which don't look even slightly believable. If
+                you are going to use a passage of Lorem Ipsum,
+              </p>
+            </div>
+            <div class="column">
+              <h4 class="title is-4">List</h4>
+              <p class="">
+                randomised words which don't look even slightly believable. If
+                you are going to use a passage of Lorem Ipsum,
+              </p>
+            </div>
+
+            <div class="column">
+              <h4 class="title is-4">Follow Us</h4>
+
+              <div class="buttons">
+                <a
+                  class="button is-medium is-facebook is-inverted is-black-social"
+                >
+                  <span class="icon">
+                    <i class="fab fa-facebook fa-lg"></i>
+                  </span>
+                </a>
+                <a
+                  class="button is-medium is-instagram is-inverted is-black-social"
+                >
+                  <span class="icon">
+                    <i class="fab fa-instagram fa-lg"></i>
+                  </span>
+                </a>
+                <a
+                  class="button is-medium is-twitter is-inverted is-black-social"
+                >
+                  <span class="icon">
+                    <i class="fab fa-twitter fa-lg"></i>
+                  </span>
+                </a>
+                <a
+                  class="button is-medium is-youtube is-inverted is-black-social"
+                >
+                  <span class="icon">
+                    <i class="fab fa-youtube fa-lg"></i>
+                  </span>
+                </a>
+              </div>
+              <h4 class="title is-4">Subscribe Now</h4>
+              <div class="field">
+                <input class="input" type="text" placeholder="Email" />
+              </div>
+              <div class="buttons">
+                <button class="button is-left is-medium is-orange">
+                  Subscribe
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
 </template>
 
 <script>
 import axios from "axios";
+// import bulmaCarousel from "bulma-carousel";
 import ProductList from "../components/ProductList";
 export default {
   components: {
@@ -36,6 +260,11 @@ export default {
   mounted() {
     this.getLatestProducts();
     document.title = " Home | Hamro Dokan";
+    bulmaCarousel.attach("#carousel-demo", {
+      initialSlide: 0,
+      slidesToScroll: 1,
+      slidesToShow: 1,
+    });
   },
   methods: {
     async getLatestProducts() {
@@ -61,5 +290,48 @@ export default {
 }
 .subtitle {
   color: #ffffff;
+}
+#carousel-section {
+  background-color: #f7f7f7 !important;
+  padding: 50px 0;
+  margin-bottom: 50px;
+}
+
+#carousel-demo {
+  margin-top: 50px;
+}
+.title {
+  color: #202020;
+}
+.button.is-black {
+  background-color: black !important;
+  color: white !important;
+}
+
+.button.is-orange {
+  background-color: #fc5d35 !important;
+  color: white !important;
+}
+
+.button.is-orange:hover {
+  background-color: white !important;
+  color: #fc5d35 !important;
+}
+.button.is-black:hover {
+  background-color: white !important;
+  color: black !important;
+}
+
+.is-black-social {
+  color: black !important;
+}
+.is-black-social:hover {
+  background-color: white !important;
+  color: #fc5d35 !important;
+}
+
+.footer-main {
+  background-color: white !important;
+  padding: 0 !important;
 }
 </style>

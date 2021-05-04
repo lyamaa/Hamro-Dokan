@@ -81,8 +81,14 @@
         <router-view />
       </section>
     </div>
-    <footer class="footer">
-      <p class="has-text-centered">Copyright ©️ 2021</p>
+
+    <footer class="footer-secondary">
+      <div class="content has-text-centered">
+        <p>
+          Copyright © 2021 Hamro Dokan ♥ by
+          <a href="https://github.com/surajmt8848">Suraj Lama</a>
+        </p>
+      </div>
     </footer>
   </body>
 </template>
@@ -138,17 +144,35 @@ body {
   -webkit-box-shadow: 0 0 10px #707070;
   -moz-box-shadow: 0 0 10px #ffdf6c;
 }
+.box:hover {
+  transform: scale(1.02);
+  border-top: 5px solid #fc5d35;
+}
+
+#map {
+  width: 100% !important;
+  height: 400px;
+  margin-bottom: 50px;
+}
 
 .navbar {
   background-color: #202020;
-  color: #ffffff;
 }
+
 .navbar-item {
+  padding-right: 40px !important;
+  font-size: large !important;
   color: #ffffff;
 }
+
 .footer {
   background-color: #202020;
   color: #ffffff;
+}
+
+.footer-secondary {
+  padding: 20px;
+  margin-top: 20px;
 }
 
 .lds-dual-ring {

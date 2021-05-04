@@ -8,6 +8,7 @@ import Cart from "../views/cart/Cart.vue"
 import Register from "../views/auth/Register.vue"
 import Login from "../views/auth/Login.vue"
 import Profile from "../views/auth/Profile.vue"
+import Checkout from "../views/checkout/Checkout.vue"
 import store from '../store'
 
 const routes = [
@@ -58,6 +59,14 @@ const routes = [
     path: '/profile',
     name: 'Profile',
     component: Profile,
+    meta: {
+      requireLogin: true
+    }
+  },
+  {
+    path: '/cart/checkout',
+    name: 'Checkout',
+    component: Checkout,
     meta: {
       requireLogin: true
     }
