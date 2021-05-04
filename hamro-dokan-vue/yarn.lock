@@ -2867,6 +2867,11 @@ crypto-browserify@^3.11.0:
     randombytes "^2.0.0"
     randomfill "^1.0.3"
 
+css-aspect-ratio@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/css-aspect-ratio/-/css-aspect-ratio-1.0.5.tgz#6ae09fb59d31b838f26f61096bca55ed8527d8fa"
+  integrity sha1-auCftZ0xuDjyb2EJa8pV7YUn2Po=
+
 css-color-names@0.0.4, css-color-names@^0.0.4:
   version "0.0.4"
   resolved "https://registry.yarnpkg.com/css-color-names/-/css-color-names-0.0.4.tgz#808adc2e79cf84738069b646cb20ec27beb629e0"

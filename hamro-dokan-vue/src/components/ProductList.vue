@@ -3,7 +3,12 @@
     <a v-bind:href="product.getAbsoluteUrl">
       <div class="box">
         <figure class="image is-5by4 mb-4">
-          <img :src="product.getThumbnail" alt="product thumbnail" />
+          <img
+            :src="product.getThumbnail"
+            alt="product thumbnail"
+            height="1024"
+            width="768"
+          />
         </figure>
         <h3 class="is-size-4">{{ product.name }}</h3>
         <p class="is-size-6 has-text-grey">

@@ -127,7 +127,7 @@
     <section class="section">
       <div class="container">
         <div class="has-text-centered pb-6">
-          <h1 class="title is-1">Best Produts</h1>
+          <h1 class="title is-1">Best Products</h1>
           <h3 class="subtitle">
             There are many variations of passages of Lorem Ipsum available, but
             the majority have
@@ -137,7 +137,7 @@
           <div
             class="column is-three-quarters is-flex is-justify-content-center is-flex-direction-column"
           >
-            <h3 class="title is-3">Best Fresh Orange</h3>
+            <h3 class="title is-3">Best Fresh Product</h3>
             <p class="hast-text-centered">
               but the majority have suffered alteration in some form, by
               injected humour, or randomised words which don't look even
@@ -153,7 +153,9 @@
           </div>
           <div class="column">
             <figure class="image">
-              <img src="images/orange.png" />
+              <img
+                src="https://res.cloudinary.com/dazyxzm1e/image/upload/v1620129151/undraw_shopping_app_flsj_k5vifw.svg"
+              />
             </figure>
           </div>
         </div>
@@ -246,7 +248,8 @@
 
 <script>
 import axios from "axios";
-// import bulmaCarousel from "bulma-carousel";
+
+import bulmaCarousel from "bulma-carousel";
 import ProductList from "../components/ProductList";
 export default {
   components: {
@@ -282,6 +285,7 @@ export default {
 </script>
 
 <style scoped>
+@import "../assets/css/bulma-carousel.min.css";
 .hero {
   background-color: #202020;
 }

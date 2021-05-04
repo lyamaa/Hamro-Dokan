@@ -2,7 +2,10 @@
   <div class="page-product">
     <div class="columns is-multiline">
       <div class="column is-9">
-        <figure class="image mb=6">
+        <figure
+          class="image mb=6 aspect-ratio"
+          style="width: 768px; --aspect-ratio-w: 4; --aspect-ratio-h: 3"
+        >
           <img v-bind:src="product.getImage" alt="" />
         </figure>
         <h1 class="title">{{ product.title }}</h1>

@@ -15,6 +15,9 @@
 import axios from "axios";
 export default {
   name: "Profile",
+  mounted() {
+    document.title = " Profile | Hamro Dokan";
+  },
   methods: {
     logout() {
       axios.defaults.headers.common["Authorization"] = "";

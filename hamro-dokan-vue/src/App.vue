@@ -43,6 +43,12 @@
                   </div>
                 </div>
               </form>
+              <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link"> Category </a>
+                <div class="navbar-dropdown is-boxed">
+                  <a class="navbar-item"> Overview </a>
+                </div>
+              </div>
             </div>
           </div>
           <div class="navbar-end">
@@ -127,8 +133,11 @@ export default {
   },
 };
 </script>
+
 <style lang="scss">
 @import "../node_modules/bulma";
+@import "css-aspect-ratio/css-aspect-ratio";
+
 #wrapper {
   flex: 1;
 }
@@ -156,6 +165,13 @@ body {
 }
 
 .navbar {
+  background-color: #202020;
+}
+.navbar-link {
+  color: #ffffff;
+  margin-right: 15rem;
+}
+.navbar-dropdown {
   background-color: #202020;
 }
 

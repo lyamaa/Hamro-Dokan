@@ -12,6 +12,7 @@
     "bulma-carousel": "^4.0.24",
     "bulma-toast": "^2.3.0",
     "core-js": "^3.6.5",
+    "css-aspect-ratio": "^1.0.5",
     "vue": "^3.0.0",
     "vue-router": "^4.0.0-0",
     "vuex": "^4.0.0-0"

@@ -56,6 +56,7 @@ export default {
   },
   mounted() {
     this.cart = this.$store.state.cart;
+    document.title = " Cart | Hamro Dokan";
   },
   methods: {
     removeFromCart(item) {
