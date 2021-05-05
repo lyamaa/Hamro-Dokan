@@ -31,6 +31,7 @@ INSTALLED_APPS = [
     "corsheaders",
     "djoser",
     "products",
+    "orders",
     "django_filters",
     "drf_yasg",
 ]
@@ -160,3 +161,5 @@ REST_FRAMEWORK = {
     "TEST_REQUEST_DEFAULT_FORMAT": "json",
     "EXCEPTION_HANDLER": "rest_framework.views.exception_handler",
 }
+
+STRIPE_SECRET_KEY = "sk_test_1YjooVfuUWXkzdTeUrLtJHTe00lxb7H6Tk"

@@ -124,7 +124,7 @@ class ProductImage(models.Model):
     """
 
     product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name="product_image")
-    image = models.ImageField(
+    images = models.ImageField(
         verbose_name=_("image"),
         help_text=_("Upload a product image"),
         upload_to="images/",
@@ -144,3 +144,8 @@ class ProductImage(models.Model):
     class Meta:
         verbose_name = _("Product Image")
         verbose_name_plural = _("Product Images")
+
+    def get_images(self):
+        if self.image:
+            return "http://127.0.0.1:8000" + self.images.url
+        return ""

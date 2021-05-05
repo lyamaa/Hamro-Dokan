@@ -6,7 +6,11 @@
           class="image mb=6 aspect-ratio"
           style="width: 768px; --aspect-ratio-w: 4; --aspect-ratio-h: 3"
         >
-          <img v-bind:src="product.getImage" alt="" />
+          <img v-bind:src="product.getImage" alt="" loading="lazy" />
+          <ProductZoomer
+            v-bind:base-images="product.getImage"
+            :base-zoomer-options="zoomerOptions"
+          />
         </figure>
         <h1 class="title">{{ product.title }}</h1>
         <p>{{ product.description }}</p>
@@ -35,8 +39,13 @@
 <script>
 import axios from "axios";
 import { toast } from "bulma-toast";
+import ProductZoomer from "vue-product-zoomer";
+
 export default {
   name: "Product",
+  components: {
+    ProductZoomer,
+  },
   data() {
     return {
       product: {},

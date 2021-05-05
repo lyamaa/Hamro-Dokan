@@ -31,6 +31,7 @@
               <div class="column is-half">
                 <figure class="image is is-covered">
                   <img
+                    loading="lazy"
                     src="https://res.cloudinary.com/dazyxzm1e/image/upload/v1620129151/undraw_shopping_app_flsj_k5vifw.svg"
                     alt=""
                   />
@@ -64,6 +65,7 @@
               <div class="column is-half">
                 <figure class="image is is-covered">
                   <img
+                    loading="lazy"
                     src="https://res.cloudinary.com/dazyxzm1e/image/upload/v1620129151/undraw_add_to_cart_vkjp_seg44h.svg"
                     alt=""
                   />
@@ -99,6 +101,7 @@
               <div class="column is-half">
                 <figure class="image is is-covered">
                   <img
+                    loading="lazy"
                     src="https://res.cloudinary.com/dazyxzm1e/image/upload/v1620129151/undraw_web_shopping_dd4l_fszlmm.svg"
                     alt=""
                   />
@@ -154,6 +157,9 @@
           <div class="column">
             <figure class="image">
               <img
+                loading="lazy"
+                width="100"
+                height="100"
                 src="https://res.cloudinary.com/dazyxzm1e/image/upload/v1620129151/undraw_shopping_app_flsj_k5vifw.svg"
               />
             </figure>
@@ -165,8 +171,11 @@
     <!-- MAP SECTION -->
     <section class="map-section">
       <iframe
-        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10499.966498430253!2d2.2944813!3d48.8583701!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x8ddca9ee380ef7e0!2zz4DPjc-BzrPOv8-CIM-Ezr_PhSDOkc6Qz4bOtc67!5e0!3m2!1sel!2sgr!4v1609878476869!5m2!1sel!2sgr"
+        class="box"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14131.341213024258!2d85.28326908165225!3d27.69148477477402!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1868199f2d47%3A0xf48b0ab8d867e77a!2z4KSV4KWB4KSy4KWH4KS24KWN4KS14KSwLCDgpJXgpL7gpKDgpK7gpL7gpKHgpYzgpIEgNDQ2MDA!5e0!3m2!1sne!2snp!4v1620141109682!5m2!1sne!2snp"
         id="map"
+        allowfullscreen=""
+        loading="lazy"
       ></iframe>
     </section>
 
