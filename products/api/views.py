@@ -13,7 +13,7 @@ from .seriailzers import CategorySerializer, ProductSerializer
 
 class LatestProductList(APIView):
     def get(self, requet, format=None):
-        products = Product.objects.all()[0:4]
+        products = Product.objects.all()[:4]
         serializer = ProductSerializer(products, many=True)
 
         return Response(serializer.data)
@@ -54,9 +54,7 @@ class SearchProductList(ListAPIView):
 
 @api_view(["POST"])
 def search(request):
-    query = request.data.get("query", "")
-
-    if query:
+    if query := request.data.get("query", ""):
         products = Product.objects.filter(Q(name__icontains=query) | Q(category__name__icontains=query))
         serializer = ProductSerializer(products, many=True)
         return Response(serializer.data)
